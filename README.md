@@ -1,39 +1,36 @@
-Showcase API - Express ES6
+Code for Seoul API - Express ES6
 ==================================
+
+[express-es6-rest-api](https://github.com/developit/express-es6-rest-api)를 포크하여 만들어진 프로젝트입니다
+
 I forked [express-es6-rest-api](https://github.com/developit/express-es6-rest-api) for this project.
 
-This is a straightforward boilerplate for building REST APIs with ES6 and Express.
+스펙(Spec)
+------------
 
 - ES6 support via [babel](https://babeljs.io)
-- REST resources as middleware via [resource-router-middleware](https://github.com/developit/resource-router-middleware)
 - CORS support via [cors](https://github.com/troygoode/node-cors)
 - Body Parsing via [body-parser](https://github.com/expressjs/body-parser)
 
-> Tip: If you are using [Mongoose](https://github.com/Automattic/mongoose), you can automatically expose your Models as REST resources using [mongoose-resource](https://gist.github.com/developit/ec2f438efc5feea4fd3a).
-
-Getting Started
+시작하기(Getting Started)
 ---------------
 
 ```sh
 # clone it
-git clone https://github.com/codeforseoul/showcase-api
-cd showcase-api
+git clone https://github.com/codeforseoul/api.codeforseoul.org
+cd api.codeforseoul.lorg
 
 # Run it
-npm start
-
-# With nodemon:
-PORT=8080 nodemon
+gulp serve
 ```
 
-Roadmap
+추후 계획(Roadmap)
 -------
-- [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) for debugging
-- Modeling with [Mongoose](https://github.com/Automattic/mongoose)
-- Building Rest API for [showcase](https://github.com/codeforseoul/showcase)
-- Setting Views with [showcase](https://github.com/codeforseoul/showcase)
 
+- resource-router-middleware 완전히 제거
+- 국회의원 본회의, 상임위원회 회의 데이터 추가(참고: [congress-report](https://github.com/codeforseoul/congress-report))
+- API Key 발급
 
-License
+라이센스(License)
 -------
 MIT
