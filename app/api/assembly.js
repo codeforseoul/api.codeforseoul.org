@@ -6,13 +6,15 @@ export default function() {
   
   api.get('/:id?', ({ params, query }, res) => {
     let queries = query || {};
+    
     if (params.id) queries['popong_idx'] = parseInt(params.id, 10);
 
-    Assembly.find(queries, (err, assemblies) => {
-      res.json(assemblies);
+    let queryFunction = queries.popong_idx ? Assembly.findOne(query) : Assembly.find(query);
+
+    queryFunction.exec((err, result) => {
+      res.json(result);
     });
   });
 
   return api;
 }
-

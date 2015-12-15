@@ -3,9 +3,9 @@ import mongoose from 'mongoose';
 let assemblySchema = new mongoose.Schema({
   district: String,
   url: String,
-  aides: Array,
+  aides: String,
   name_kr: String,
-  pr_secrs: Array,
+  pr_secrs: String,
   email: String,
   photo: String,
   off_phone: String,
@@ -14,12 +14,12 @@ let assemblySchema = new mongoose.Schema({
   birth: String,
   party: String,
   when_elected: String,
-  sc_secrs: Array,
+  sc_secrs: String,
   popong_idx: { type: Number, required: true, unique: true },
-  hobby: Array,
+  hobby: String,
   assembly_idx: { type: Number, required: true, unique: true },
   name_en: String,
-  committee: Array,
+  committee: String,
   experience: String,
   homepage: String
 }, { collection:'assembly' });
